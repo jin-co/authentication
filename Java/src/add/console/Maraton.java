@@ -2,6 +2,7 @@ package add.console;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class Maraton {
@@ -35,7 +36,10 @@ public class Maraton {
                 }
             }
         }
-
+        System.out.println(participant);
+        for (String y: participant) {
+            System.out.println(y);
+        }
         for (String y: participant) {
             if (y != "") {
                 answer += y;
@@ -44,6 +48,21 @@ public class Maraton {
 //        for (String k : completion) {
 //
 //        }
+        return answer;
+    }
+
+    public String solution1(String[] participant, String[] completion) {
+        String answer = "";
+
+        HashMap<String, Integer> hm = new HashMap<>();
+        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+        for (String player : completion) hm.put(player, hm.get(player) - 1);
+
+        for (String key : hm.keySet()) {
+            if (hm.get(key) != 0){
+                answer = key;
+            }
+        }
         return answer;
     }
 }

@@ -12,14 +12,23 @@ namespace PhoneBook
         {
             bool answer = true;
 
-            string[] values = input.ToString().Split(',');
-            foreach (var i in values)
+            List<string> values = new List<string>() { };
+
+            for (int i = 0; i < input.Length; i++)
             {
-                Console.WriteLine(i);
+                values.Add(input[i]);
             }
             
-
-
+            foreach (var i in values)
+            {
+                for (int j = 0; j < values.Count; j++)
+                {
+                    if (i != values[j] && values[j].StartsWith(i))
+                    {
+                        answer = false;
+                    }
+                }
+            }
 
             return answer;
         }

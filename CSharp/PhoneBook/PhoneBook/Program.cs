@@ -6,7 +6,7 @@ namespace PhoneBook
     {
         static void Main(string[] args)
         {
-            string[] input = new string[] { "119", "97674223", "1195524421" };            
+            string[] input = new string[] { "123", "456", "789" };            
             Console.WriteLine(PhoneBook.Phone(input));
         }
     }

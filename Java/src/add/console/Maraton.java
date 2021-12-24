@@ -36,10 +36,6 @@ public class Maraton {
                 }
             }
         }
-        System.out.println(participant);
-        for (String y: participant) {
-            System.out.println(y);
-        }
         for (String y: participant) {
             if (y != "") {
                 answer += y;

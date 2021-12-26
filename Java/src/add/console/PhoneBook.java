@@ -1,6 +1,7 @@
 package add.console;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class PhoneBook {
     /*
@@ -21,27 +22,43 @@ public class PhoneBook {
     public static boolean phone(String[] phone_book) {
         boolean answer = true;
         java.util.ArrayList<String> numbers = new java.util.ArrayList<>();
-
+        int length = 10;
+        String shortest = "";
         for (String i : phone_book) {
             numbers.add(i);
-        }
-
-        for (int i = 0; i < numbers.size(); i++) {
-            for (int j = 0; j < numbers.size(); j++) {
-                if (numbers.get(i) != numbers.get(j) && numbers.get(i).startsWith(numbers.get(j))) {
-                    answer = false;
-                }
+            if (length > i.length()) {
+                length = i.length();
+                shortest = i;
             }
         }
+
+        numbers.remove(shortest);
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i).startsWith(shortest)) {
+                answer = false;
+                break;
+            }
+        }
+
+        // time over
+//        for (int i = 0; i < numbers.size(); i++) {
+//            for (int j = 0; j < numbers.size(); j++) {
+//                if (numbers.get(i) != numbers.get(j) && numbers.get(i).startsWith(numbers.get(j))) {
+//                    answer = false;
+//                    break;
+//                }
+//            }
+//        }
 
 //        for (int i = 0; i < numbers.size(); i++) {
 //            firsNums.add(numbers.get(i).split(" ")[0]);
 //            System.out.println(firsNums);
 //        }
 
-        for (String i : numbers) {
-            System.out.println(i);
-        }
+//        for (String i : numbers) {
+//            System.out.println(i);
+//        }
         return answer;
     }
 }

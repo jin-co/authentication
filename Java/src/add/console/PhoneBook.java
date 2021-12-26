@@ -21,14 +21,14 @@ public class PhoneBook {
     public static boolean phone(String[] phone_book) {
         boolean answer = true;
 
-        java.util.ArrayList<String> numbers = new java.util.ArrayList<>();
-        java.util.Collections.addAll(numbers, phone_book);
-        numbers.sort(java.util.Comparator.comparingInt(String::length));
-        int shortest = numbers.get(0).length();
+//        java.util.ArrayList<String> numbers = new java.util.ArrayList<>();
+//        java.util.Collections.addAll(numbers, phone_book);
+//        numbers.sort(java.util.Comparator.comparingInt(String::length));
+//        int shortest = numbers.get(0).length();
 
-        for (int i = 0; i < numbers.size(); i++) {
-            for (int j = i + 1; j < numbers.size(); j++) {
-                if (numbers.get(j).startsWith(numbers.get(i))) {
+        for (int i = 0; i < phone_book.length; i++) {
+            for (int j = i + 1; j < phone_book.length; j++) {
+                if (phone_book[j].startsWith(phone_book[i])) {
                     return false;
                 }
             }

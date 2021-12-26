@@ -1,4 +1,5 @@
 package add.console;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,22 +23,26 @@ public class PhoneBook {
     public static boolean phone(String[] phone_book) {
         boolean answer = true;
         java.util.ArrayList<String> numbers = new java.util.ArrayList<>();
-        int length = 10;
-        String shortest = "";
+//        java.util.ArrayList<String> numbers = new ArrayList<>();
+//        Collections.addAll(numbers, phone_book);
+        int length = 20;
+        java.util.ArrayList<String> shortest = new java.util.ArrayList<>();
         for (String i : phone_book) {
             numbers.add(i);
-            if (length > i.length()) {
+            if (length >= i.length()) {
                 length = i.length();
-                shortest = i;
+                shortest.add(i);
             }
         }
 
         numbers.remove(shortest);
 
         for (int i = 0; i < numbers.size(); i++) {
-            if (numbers.get(i).startsWith(shortest)) {
-                answer = false;
-                break;
+            for (int j = 0; j < shortest.size(); j++) {
+                if (numbers.get(i).startsWith(shortest)) {
+                    answer = false;
+                    break;
+                }
             }
         }
 

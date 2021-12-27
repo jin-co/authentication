@@ -29,7 +29,7 @@ public class PhoneBook {
 //        int shortest = numbers.get(0).length();
         java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
 //        java.util.Arrays.sort(phone_book, (a, b)->Integer.compare(a.length(), b.length()));
-        for (int i = 0; i < phone_book.length; i++) {
+        for (int i = 0; i < phone_book.length - 1; i++) {
             for (int j = i + 1; j < phone_book.length; j++) {
 
                 if (phone_book[j].length() != phone_book[i].length() &&

@@ -1,6 +1,8 @@
 package add.console;
 
+import java.util.Arrays;
 import java.util.Collection;
+
 
 public class PhoneBook {
     /*
@@ -25,10 +27,13 @@ public class PhoneBook {
 //        java.util.Collections.addAll(numbers, phone_book);
 //        numbers.sort(java.util.Comparator.comparingInt(String::length));
 //        int shortest = numbers.get(0).length();
-
+        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
+//        java.util.Arrays.sort(phone_book, (a, b)->Integer.compare(a.length(), b.length()));
         for (int i = 0; i < phone_book.length; i++) {
             for (int j = i + 1; j < phone_book.length; j++) {
-                if (phone_book[j].startsWith(phone_book[i])) {
+
+                if (phone_book[j].length() != phone_book[i].length() &&
+                        phone_book[j].startsWith(phone_book[i])) {
                     return false;
                 }
             }

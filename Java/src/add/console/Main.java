@@ -13,7 +13,7 @@ public class Main {
 //
 //        System.out.println(maraton.solution(participant, completion));
 //        System.out.println(maraton.solution1(participant, completion));
-        String[] input = new String[] {"12","123","1235","567","88"};
+        String[] input = new String[] {"119", "97674223", "12","13","15","567","88", "1195524421"};
         System.out.println(PhoneBook.phone(input));
 
     }

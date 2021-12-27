@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 
+
 public class PhoneBook {
     /*
     * 전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
@@ -27,17 +28,37 @@ public class PhoneBook {
 //        java.util.Collections.addAll(numbers, phone_book);
 //        numbers.sort(java.util.Comparator.comparingInt(String::length));
 //        int shortest = numbers.get(0).length();
-        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
-//        java.util.Arrays.sort(phone_book, (a, b)->Integer.compare(a.length(), b.length()));
-        for (int i = 0; i < phone_book.length - 1; i++) {
-            for (int j = i + 1; j < phone_book.length; j++) {
 
-                if (phone_book[j].length() != phone_book[i].length() &&
-                        phone_book[j].startsWith(phone_book[i])) {
+//        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
+//        for (int i = 0; i < phone_book.length - 1; i++) {
+//            for (int j = i + 1; j < phone_book.length; j++) {
+//
+//                if (phone_book[j].length() != phone_book[i].length() &&
+//                        phone_book[j].startsWith(phone_book[i])) {
+//                    return false;
+//                }
+//            }
+//        }
+        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
+        java.util.HashMap<String, String> numbers = new java.util.HashMap<>();
+        for (int i = 0; i < phone_book.length; i++) {
+            numbers.put(phone_book[i], phone_book[i]);
+        }
+
+        for(String s: phone_book) {
+            if (numbers.containsKey(s)) {
+
+            }
+        }
+
+        for (int i = 0; i < phone_book.length; i++) {
+            for(String k: numbers.values()) {
+                if (k != phone_book[i] && k.startsWith(phone_book[i])) {
                     return false;
                 }
             }
         }
+
 
 
 //        for (int i = 0; i < phone_book.length; i++) {

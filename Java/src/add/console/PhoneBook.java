@@ -26,22 +26,23 @@ public class PhoneBook {
 //        numbers.sort(java.util.Comparator.comparingInt(String::length));
 //        int shortest = numbers.get(0).length();
 
+        for (int i = 0; i < phone_book.length; i++) {
+            for (int j = i + 1; j < phone_book.length; j++) {
+                if (phone_book[j].startsWith(phone_book[i])) {
+                    return false;
+                }
+            }
+        }
+
+
 //        for (int i = 0; i < phone_book.length; i++) {
 //            for (int j = i + 1; j < phone_book.length; j++) {
-//                if (phone_book[j].startsWith(phone_book[i])) {
+//                if (phone_book[j].length() != phone_book[i].length() &&
+//                        phone_book[j].startsWith(phone_book[i])) {
 //                    return false;
 //                }
 //            }
 //        }
-
-        for (int i = 0; i < phone_book.length; i++) {
-            for (int j = i + 1; j < phone_book.length; j++) {
-                if (phone_book[j].length() != phone_book[i].length() && phone_book[j].startsWith(phone_book[i])) {
-                    answer = false;
-                    break;
-                }
-            }
-        }
 
 //        java.util.ArrayList<String> numbers = new java.util.ArrayList<>();
 

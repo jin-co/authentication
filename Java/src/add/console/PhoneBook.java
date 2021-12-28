@@ -39,25 +39,34 @@ public class PhoneBook {
 //                }
 //            }
 //        }
-        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
+//        java.util.Arrays.sort(phone_book, java.util.Comparator.comparingInt(String::length));
+//        java.util.HashMap<String, String> numbers = new java.util.HashMap<>();
+//        for (int i = 0; i < phone_book.length; i++) {
+//            numbers.put(phone_book[i], phone_book[i]);
+//        }
+//
+//        for (int i = 0; i < phone_book.length; i++) {
+//            if (numbers.containsKey(i)) return false;
+////            for(String k: numbers.values()) {
+////                if (k != phone_book[i] && k.startsWith(phone_book[i])) {
+////                    return false;
+////                }
+////            }
+//        }
+
         java.util.HashMap<String, String> numbers = new java.util.HashMap<>();
         for (int i = 0; i < phone_book.length; i++) {
             numbers.put(phone_book[i], phone_book[i]);
         }
 
-        for(String s: phone_book) {
-            if (numbers.containsKey(s)) {
-
-            }
-        }
-
-        for (int i = 0; i < phone_book.length; i++) {
-            for(String k: numbers.values()) {
-                if (k != phone_book[i] && k.startsWith(phone_book[i])) {
+        for(int i = 0 ; i < phone_book.length ; i++) {
+            for(int j = 1 ; j < phone_book[i].length() ; j++ ) {
+                if(numbers.containsKey(phone_book[i].substring(0,j))) {
                     return false;
                 }
             }
         }
+
 
 
 

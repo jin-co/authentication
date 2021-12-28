@@ -20,7 +20,7 @@ public class Maraton {
      * 참가자 중에는 동명이인이 있을 수 있습니다.
      * */
 
-    public String solution(String[] participant, String[] completion) {
+    public static String solution(String[] participant, String[] completion) {
         String answer = "";
 //        List<String> completionList = new ArrayList<>(Arrays.asList(completion));
 //        for (int i = 0; i < participant.length; i++) {
@@ -44,21 +44,16 @@ public class Maraton {
 //        for (String k : completion) {
 //
 //        }
-        return answer;
-    }
 
-    public String solution1(String[] participant, String[] completion) {
-        String answer = "";
-
-        HashMap<String, Integer> hm = new HashMap<>();
-        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
-        for (String player : completion) hm.put(player, hm.get(player) - 1);
-
-        for (String key : hm.keySet()) {
-            if (hm.get(key) != 0){
-                answer = key;
-            }
-        }
+//        HashMap<String, Integer> hm = new HashMap<>();
+//        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);
+//        for (String player : completion) hm.put(player, hm.get(player) - 1);
+//
+//        for (String key : hm.keySet()) {
+//            if (hm.get(key) != 0){
+//                answer = key;
+//            }
+//        }
         return answer;
     }
 }

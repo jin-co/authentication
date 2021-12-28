@@ -22,28 +22,21 @@ public class Maraton {
 
     public static String solution(String[] participant, String[] completion) {
         String answer = "";
-//        List<String> completionList = new ArrayList<>(Arrays.asList(completion));
-//        for (int i = 0; i < participant.length; i++) {
-//            if (!completionList.contains(participant[i])) {
-//                answer += participant[i];
-//            }
+
+        java.util.HashMap<String, String> completions = new java.util.HashMap<>();
+//        for (int i = 0; i < completion.length; i++) {
+//            completions.put(completion[i], completion[i]);
 //        }
+        for (String c: completion) {
+            completions.put(c, c);
+        }
+
         for (int i = 0; i < participant.length; i++) {
-            for (int j = 0; j < completion.length; j++) {
-                if (participant[i] == completion[j]) {
-                    participant[i] = "";
-                    completion[j] = "";
-                }
+
+            if (!completions.containsKey(participant[i])) {
+                return participant[i];
             }
         }
-        for (String y: participant) {
-            if (y != "") {
-                answer += y;
-            }
-        }
-//        for (String k : completion) {
-//
-//        }
 
 //        HashMap<String, Integer> hm = new HashMap<>();
 //        for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);

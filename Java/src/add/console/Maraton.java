@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Maraton {
     /*
@@ -32,6 +33,7 @@ public class Maraton {
         }
 
         for (int i = 0; i < participant.length; i++) {
+            String value = participant[i];
 
             if (!completions.containsKey(participant[i])) {
                 return participant[i];

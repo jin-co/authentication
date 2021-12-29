@@ -33,13 +33,9 @@ public class Maraton {
         }
 
         for (int i = 0; i < participant.length; i++) {
-            if (completions.containsKey(participant[i])) {
-                completions.remove(participant[i]);
+            if (!completions.containsKey(participant[i])) {
+                return participant[i];
             }
-            return completions.values().toString();
-//            if (!completions.containsKey(participant[i])) {
-//                return participant[i];
-//            }
         }
 
 //        HashMap<String, Integer> hm = new HashMap<>();

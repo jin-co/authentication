@@ -18,6 +18,7 @@ public class Main {
 
 //        String[] input = new String[] {"119", "97674223", "12","13","15","567","88", "1195524421"};
 //        System.out.println(PhoneBook.phone(input));
-
+        int[] nums = {1, 4, 2, 5};
+        System.out.println(nums[0]);
     }
 }

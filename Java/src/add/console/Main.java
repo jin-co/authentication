@@ -10,7 +10,11 @@ public class Main {
         String[] completion1 = new String[] {"josipa", "filipa", "marina", "nikola"};
         String[] completion2 = new String[] {"stanko", "ana", "mislav", "ana"};
 
-        System.out.println(Maraton.solution(participant2, completion2));
+//        System.out.println(Maraton.solution(participant2, completion2));
+        int[] stones = new int[] {1, 3, 2};
+        int k = 3;
+
+        System.out.println(Stone.stone(stones, k));
 
 //        String[] input = new String[] {"119", "97674223", "12","13","15","567","88", "1195524421"};
 //        System.out.println(PhoneBook.phone(input));

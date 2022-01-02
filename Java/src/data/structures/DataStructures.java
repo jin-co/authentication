@@ -1,7 +1,7 @@
 package data.structures;
 
 public class DataStructures {
-    public static int[] Structure() {
+    public static void Structure() {
         /* ========= Data structures ========= */
         /* Arrays */
         // items are stored in the main memory(RAM)

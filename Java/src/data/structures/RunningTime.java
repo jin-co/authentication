@@ -1,7 +1,7 @@
 package data.structures;
 
-public class Main {
-    public static void Main(String[] args) {
+public class RunningTime {
+    public static void Running() {
         int[] nums = {1, 2, 3, 5, 6};
 
         /* when index is known / no sorting */

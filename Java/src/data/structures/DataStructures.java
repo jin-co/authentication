@@ -1,5 +1,7 @@
 package data.structures;
 
+import java.util.Arrays;
+
 public class DataStructures {
     public static void Structure() {
         /* ========= Data structures ========= */
@@ -21,5 +23,39 @@ public class DataStructures {
             result[j] = nums[i];
         }
         return result;
+    }
+
+    public static int[] reverseV2(int[] nums) {
+        int startIndex = 0;
+        int endIndext = nums.length - 1;
+
+        while(endIndext > startIndex) {
+            int temp = nums[startIndex];
+            nums[startIndex] = nums[endIndext];
+            nums[endIndext] = temp;
+            startIndex++;
+            endIndext++;
+        }
+        return nums;
+    }
+
+    public static boolean anagram(String value1, String value2) {
+        char[] valueOne = value1.toCharArray();
+        char[] valueTwo = value2.toCharArray();
+        if (valueOne.length != valueTwo.length || valueOne == valueTwo) return false;
+        Arrays.sort(valueOne);
+        Arrays.sort(valueTwo);
+        if (valueOne != valueTwo) return false;
+        return true;
+    }
+
+    public static void duplicate(int[] input) {
+        for (int i = 0; i < input.length; i++) {
+            if (input[Math.abs(input[i])] > 0) {
+                input[Math.abs(input[i])] = -input[Math.abs(input[i])];
+            } else {
+                System.out.println(Math.abs(input[i]) + " repetition");
+            }
+        }
     }
 }

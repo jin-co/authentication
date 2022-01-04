@@ -7,6 +7,7 @@ public class DataStructures {
         /* ========= Data structures ========= */
         /* Arrays */
         // items are stored in the main memory(RAM)
+        // each item has 4byte
         // optimized to find random item using indices -> O(1): constant / or to remove the last item
         // in other cases(such as the index is not known or removing item that is not the last) -> O(N): linear
         int[] input = {1, 2, 3};
@@ -15,6 +16,12 @@ public class DataStructures {
         for (int i: output) {
             System.out.println(i);
         }
+
+        /* Linked List */
+        // every node stores the data itself and a reference the next node -> takes more memory
+        // only the first item is accessible so inserting or removing an item to the first position is fast: O(1)
+        // but other cases(middle or last) it is O(N)
+        // no index
     }
 
     public static int[] reverse(int[] nums) {

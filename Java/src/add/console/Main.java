@@ -1,6 +1,7 @@
 package add.console;
 
 import data.structures.DataStructures;
+import data.structures.LinkedList;
 import data.structures.RunningTime;
 
 public class Main {
@@ -23,6 +24,10 @@ public class Main {
 //        System.out.println(PhoneBook.phone(input));
         int[] nums = {1, 4, 2, 5};
         System.out.println(nums[0]);
-
+        LinkedList<String> names = new LinkedList<>();
+        names.insert("tom");
+        names.insert("jack");
+        names.insert("wang");
+        names.traverse();
     }
 }

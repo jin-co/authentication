@@ -7,7 +7,7 @@ public class DataStructures {
         /* ========= Data structures ========= */
         /* Arrays */
         // items are stored in the main memory(RAM)
-        // each item has 4byte
+        // each item has 4byte and no extra memory is needed
         // optimized to find random item using indices -> O(1): constant / or to remove the last item
         // in other cases(such as the index is not known or removing item that is not the last) -> O(N): linear
         int[] input = {1, 2, 3};

@@ -1,8 +1,8 @@
 package add.console;
 
-import data.structures.DataStructures;
-import data.structures.LinkedList;
-import data.structures.RunningTime;
+import data.structures.*;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -29,5 +29,32 @@ public class Main {
         names.insert("jack");
         names.insert("wang");
         names.traverse();
+
+        // doubly linked list
+        DoublyLinkedList<String> dNames = new DoublyLinkedList<>();
+        dNames.insert("a");
+        dNames.insert("v");
+        dNames.insert("e");
+        dNames.insert("e");
+        dNames.traverseBackward();
+        dNames.traverseBackward();
+
+        // Java LinkedList is doubly linked
+        java.util.LinkedList<String> dll = new java.util.LinkedList<>();
+        dll.addLast("wha");
+        dll.addLast("hll");
+        dll.removeFirst();
+        dll.removeLast();
+
+        // speed test
+        java.util.ArrayList<Integer> tArray = new ArrayList<>();
+        long now = System.currentTimeMillis();
+        for (int i = 0; i < 500000; i++) tArray.add(0, i);
+        System.out.println("Time taken for ArrayList: " + (System.currentTimeMillis() - now));
+
+        java.util.LinkedList<Integer> tList = new java.util.LinkedList<>();
+        now = System.currentTimeMillis();
+        for (int i = 0; i < 500000; i++) tList.addFirst(i);
+        System.out.println("Time taken for LinkedList: " + (System.currentTimeMillis() - now));
     }
 }

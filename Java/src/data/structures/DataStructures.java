@@ -19,8 +19,15 @@ public class DataStructures {
 
         /* Linked List */
         // every node stores the data itself and a reference the next node -> takes more memory
-        // only the first item is accessible so inserting or removing an item to the first position is fast: O(1)
+        // only the first item (head node) is accessible so inserting or removing an item to the first position is fast: O(1)
         // but other cases(middle or last) it is O(N)
+        // no index
+
+        /* Doubly Linked List */
+        // in addition to the head node, there is tail node to reference the last node -> so requires even more memory than Linked List
+        // manipulating the first and last item is O(1)
+        // but still finding arbitrary item is O(N)
+        // items are put at the end
         // no index
     }
 

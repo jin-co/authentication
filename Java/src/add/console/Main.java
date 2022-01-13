@@ -28,7 +28,9 @@ public class Main {
         names.insert("tom");
         names.insert("jack");
         names.insert("wang");
+        names.reverse();
         names.traverse();
+        System.out.println("middel value: " + names.getMiddleNode());
 
         // doubly linked list
         DoublyLinkedList<String> dNames = new DoublyLinkedList<>();

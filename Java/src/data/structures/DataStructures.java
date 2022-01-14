@@ -72,4 +72,27 @@ public class DataStructures {
             }
         }
     }
+
+    /*
+    * Stacks -> an abstract data type (can be implemented either with arrays or linked list)
+    * - LIFO structure: the last item add is the first item to be taken out
+    * - operations:
+    * -> pop(): remove the last item
+    * -> push(): add a new item
+    * -> peek(): get the value of the last item
+    * - most of the modern programming languages are stack-oriented
+    * - they define most basic operations (adding two numbers) as taking their arguments from
+    * the stack and placing any return values back on the stack
+    * - stored in RAM
+    * - stores the active functions and local variables
+    * small size, fast access, stores function calls and local variables, no fragmentation
+    * */
+
+    /*
+    * Heap*
+    * - stored in RAM
+    * when an object is created it is stored it the heap but the reference is stored in the stack
+    * large size, slow access, stores objects, may become fragmented
+    *
+    * */
 }

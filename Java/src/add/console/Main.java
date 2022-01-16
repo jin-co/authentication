@@ -1,6 +1,7 @@
 package add.console;
 
 import data.structures.*;
+import data.structures.stack.Stack;
 
 import java.util.ArrayList;
 
@@ -58,5 +59,16 @@ public class Main {
         now = System.currentTimeMillis();
         for (int i = 0; i < 500000; i++) tList.addFirst(i);
         System.out.println("Time taken for LinkedList: " + (System.currentTimeMillis() - now));
+
+        // stack
+        Stack<String> stackNames = new Stack<>();
+        stackNames.push("a");
+        stackNames.push("v");
+        stackNames.push("e");
+        stackNames.push("e");
+
+        while (!stackNames.isEmpty()) {
+            System.out.println("stack: "+ stackNames.pop());
+        }
     }
 }

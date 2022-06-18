@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.activities.shared.SplashActivity"
-    android:background="@drawable/best_deal_splash">
+    tools:context=".UI.activities.shared.SplashActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
